@@ -1,25 +1,130 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VjK-GQ-fW2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--SJNotes-->
+        <scene sceneID="62k-a1-jvg">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="GkB-v5-f8v" customClass="SJRootTableViewController" customModule="SJNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Nwj-Ie-dpq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SJRootTableViewCellIdentifier" id="PdX-mP-340">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PdX-mP-340" id="vJ3-By-f52">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GkB-v5-f8v" id="qxx-Fw-VnY"/>
+                            <outlet property="delegate" destination="GkB-v5-f8v" id="BeN-TX-I0T"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="SJNotes" id="tE9-kv-Sa3"/>
+                    <connections>
+                        <segue destination="Up2-sj-u8w" kind="show" identifier="toSJTakePhotoViewControllerSegue" id="wLi-M8-oON"/>
+                        <segue destination="dPG-qj-Is3" kind="show" identifier="toSJQRCodeViewControllerSegue" id="cST-rU-jI5"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQi-SI-DDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1114" y="952"/>
+        </scene>
+        <!--拍照-->
+        <scene sceneID="kN7-7F-wsI">
+            <objects>
+                <viewController storyboardIdentifier="SJTakePhotoViewController" id="Up2-sj-u8w" customClass="SJTakePhotoViewController" customModule="SJNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wd7-Wf-PxS"/>
+                        <viewControllerLayoutGuide type="bottom" id="JAS-7k-3Va"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WMl-l1-yqa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CXp-qH-VSm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CXp-qH-VSm" firstAttribute="leading" secondItem="WMl-l1-yqa" secondAttribute="leading" id="4N3-oQ-SOE"/>
+                            <constraint firstItem="CXp-qH-VSm" firstAttribute="top" secondItem="WMl-l1-yqa" secondAttribute="top" id="9LD-tv-C5C"/>
+                            <constraint firstAttribute="trailing" secondItem="CXp-qH-VSm" secondAttribute="trailing" id="LJW-aO-Mcw"/>
+                            <constraint firstAttribute="bottom" secondItem="CXp-qH-VSm" secondAttribute="bottom" id="aVE-sh-3n2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="拍照" id="GXd-GA-LNn"/>
+                    <connections>
+                        <outlet property="imageView" destination="CXp-qH-VSm" id="55Y-N3-H6h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8R0-EL-viA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2127" y="501"/>
+        </scene>
+        <!--扫描二维码/条形码-->
+        <scene sceneID="mwk-ml-xkx">
+            <objects>
+                <viewController storyboardIdentifier="SJQRCodeViewController" id="dPG-qj-Is3" customClass="SJQRCodeViewController" customModule="SJNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sVy-60-p3s"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cz2-EW-gbW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZgZ-2H-rR4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fe4-yL-oq8">
+                                <rect key="frame" x="16" y="524" width="568" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="wNR-QK-a6V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fe4-yL-oq8" firstAttribute="leading" secondItem="ZgZ-2H-rR4" secondAttribute="leadingMargin" id="3WH-Qw-IG9"/>
+                            <constraint firstItem="Fe4-yL-oq8" firstAttribute="trailing" secondItem="ZgZ-2H-rR4" secondAttribute="trailingMargin" id="KiN-i7-UFF"/>
+                            <constraint firstItem="Cz2-EW-gbW" firstAttribute="top" secondItem="Fe4-yL-oq8" secondAttribute="bottom" constant="20" id="N8X-Vc-Nla"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="扫描二维码/条形码" id="NDQ-I2-ibY"/>
+                    <connections>
+                        <outlet property="labMessage" destination="Fe4-yL-oq8" id="v70-hl-qGT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ES1-pL-1MT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2127" y="1235"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mUv-AQ-0Yw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VjK-GQ-fW2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v2P-sN-uuu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GkB-v5-f8v" kind="relationship" relationship="rootViewController" id="fTo-vB-oBz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h5Y-cp-HWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="197" y="894"/>
         </scene>
     </scenes>
 </document>

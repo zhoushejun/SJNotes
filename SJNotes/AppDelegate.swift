@@ -6,6 +6,12 @@
 //  Copyright (c) 2015年 shejun.zhou. All rights reserved.
 //
 
+/**
+ @file      AppDelegate.swift
+ @abstract  iOS 知识点笔记
+ @author    shejun.zhou
+ @version   1.0 2015/6/16 Creation
+ */
 import UIKit
 
 @UIApplicationMain
