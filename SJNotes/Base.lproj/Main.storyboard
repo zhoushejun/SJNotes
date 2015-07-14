@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--SJNotes-->
@@ -11,7 +10,7 @@
             <objects>
                 <tableViewController id="GkB-v5-f8v" customClass="SJRootTableViewController" customModule="SJNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Nwj-Ie-dpq">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -35,7 +34,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQi-SI-DDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1114" y="952"/>
+            <point key="canvasLocation" x="616" y="900"/>
         </scene>
         <!--拍照-->
         <scene sceneID="kN7-7F-wsI">
@@ -46,29 +45,29 @@
                         <viewControllerLayoutGuide type="bottom" id="JAS-7k-3Va"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WMl-l1-yqa">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CXp-qH-VSm">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m2V-kD-BP5">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CXp-qH-VSm" firstAttribute="leading" secondItem="WMl-l1-yqa" secondAttribute="leading" id="4N3-oQ-SOE"/>
-                            <constraint firstItem="CXp-qH-VSm" firstAttribute="top" secondItem="WMl-l1-yqa" secondAttribute="top" id="9LD-tv-C5C"/>
-                            <constraint firstAttribute="trailing" secondItem="CXp-qH-VSm" secondAttribute="trailing" id="LJW-aO-Mcw"/>
-                            <constraint firstAttribute="bottom" secondItem="CXp-qH-VSm" secondAttribute="bottom" id="aVE-sh-3n2"/>
+                            <constraint firstItem="JAS-7k-3Va" firstAttribute="top" secondItem="m2V-kD-BP5" secondAttribute="bottom" id="cA0-bL-nMt"/>
+                            <constraint firstAttribute="trailing" secondItem="m2V-kD-BP5" secondAttribute="trailing" id="jH3-an-8PD"/>
+                            <constraint firstItem="m2V-kD-BP5" firstAttribute="leading" secondItem="WMl-l1-yqa" secondAttribute="leading" id="kFj-lM-kaI"/>
+                            <constraint firstItem="m2V-kD-BP5" firstAttribute="top" secondItem="wd7-Wf-PxS" secondAttribute="bottom" id="ncR-94-m60"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="拍照" id="GXd-GA-LNn"/>
                     <connections>
-                        <outlet property="imageView" destination="CXp-qH-VSm" id="55Y-N3-H6h"/>
+                        <outlet property="imageView" destination="m2V-kD-BP5" id="3Ge-yQ-ByO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8R0-EL-viA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2127" y="501"/>
+            <point key="canvasLocation" x="1161" y="579"/>
         </scene>
         <!--扫描二维码/条形码-->
         <scene sceneID="mwk-ml-xkx">
@@ -79,13 +78,13 @@
                         <viewControllerLayoutGuide type="bottom" id="Cz2-EW-gbW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZgZ-2H-rR4">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fe4-yL-oq8">
-                                <rect key="frame" x="16" y="524" width="568" height="56"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="288" translatesAutoresizingMaskIntoConstraints="NO" id="K3q-TU-pEc">
+                                <rect key="frame" x="16" y="380" width="288" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="wNR-QK-a6V"/>
+                                    <constraint firstAttribute="height" constant="80" id="CMg-bE-B4u"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -94,25 +93,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Fe4-yL-oq8" firstAttribute="leading" secondItem="ZgZ-2H-rR4" secondAttribute="leadingMargin" id="3WH-Qw-IG9"/>
-                            <constraint firstItem="Fe4-yL-oq8" firstAttribute="trailing" secondItem="ZgZ-2H-rR4" secondAttribute="trailingMargin" id="KiN-i7-UFF"/>
-                            <constraint firstItem="Cz2-EW-gbW" firstAttribute="top" secondItem="Fe4-yL-oq8" secondAttribute="bottom" constant="20" id="N8X-Vc-Nla"/>
+                            <constraint firstAttribute="trailing" secondItem="K3q-TU-pEc" secondAttribute="trailing" constant="16" id="SII-NI-IbJ"/>
+                            <constraint firstItem="Cz2-EW-gbW" firstAttribute="top" secondItem="K3q-TU-pEc" secondAttribute="bottom" constant="20" id="nIt-EY-OpA"/>
+                            <constraint firstItem="K3q-TU-pEc" firstAttribute="leading" secondItem="ZgZ-2H-rR4" secondAttribute="leading" constant="16" id="vxn-a1-yxh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="扫描二维码/条形码" id="NDQ-I2-ibY"/>
                     <connections>
-                        <outlet property="labMessage" destination="Fe4-yL-oq8" id="v70-hl-qGT"/>
+                        <outlet property="labMessage" destination="K3q-TU-pEc" id="9sR-gG-H6F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ES1-pL-1MT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2127" y="1235"/>
+            <point key="canvasLocation" x="1161" y="1313"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mUv-AQ-0Yw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VjK-GQ-fW2" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="v2P-sN-uuu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
