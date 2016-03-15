@@ -163,6 +163,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SJ;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = shejun.zhou;
 				TargetAttributes = {

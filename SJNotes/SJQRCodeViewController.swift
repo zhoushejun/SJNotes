@@ -80,7 +80,7 @@ class SJQRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
         }
 
         session.stopRunning()
-        println("code is \(stringValue)")
+        print("code is \(stringValue)")
         
         var alertView = UIAlertView()
         alertView.delegate=self
